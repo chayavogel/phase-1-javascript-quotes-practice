@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
     })
 })
 
+
+
 function handleData(obj) {
     const ul = document.getElementById("quote-list")
 
@@ -33,7 +35,8 @@ function handleData(obj) {
     buttonSuccess.setAttribute("class", "btn-success")
     buttonSuccess.innerText = "Likes: "
     const btnSpan = document.createElement("span")
-    btnSpan.innerText = 0
+    btnSpan.innerText = obj.likes.length
+
     const buttonDanger = document.createElement("button")
     buttonDanger.setAttribute("class", "btn-danger")
     buttonDanger.innerText = "Delete"
@@ -56,7 +59,35 @@ function handleData(obj) {
             }
         })
         .then(res => res.json())
-        .then(obj => console.log(obj))
+    }
+
+    buttonSuccess.addEventListener("click", updateLiker)
+
+    function updateLiker() {
+
+        fetch(`http://localhost:3000/likes`, {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                quoteId: obj.id
+            })
+        })
+        .then(res => res.json())
+        .then(function(data) {
+            fetch(`http://localhost:3000/likes?quoteId=${obj.id}`, {
+        method: "GET",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+    })
+    .then(res => res.json())
+    .then(function(obj) {
+        btnSpan.innerText = obj.length
+        })
+
+        })
     }
 
 

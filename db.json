@@ -1,16 +1,6 @@
 {
   "quotes": [
     {
-      "id": 5,
-      "quote": "We had better not enjoy the moment, but create the moment.",
-      "author": "Ai Weiwei"
-    },
-    {
-      "id": 6,
-      "quote": "If I didn't define myself for myself, I would be crunched into other people's fantasies for me and eaten alive.",
-      "author": "Audre Lorde"
-    },
-    {
       "id": 7,
       "quote": "Our greatest glory is not in never falling, but in rising everytime we fall.",
       "author": "Confucius"
@@ -63,9 +53,56 @@
   ],
   "likes": [
     {
-      "quoteId": 10,
-      "id": 2,
-      "createdAt": 1558524358
+      "quoteId": 9,
+      "id": 1
+    },
+    {
+      "quoteId": 9,
+      "id": 2
+    },
+    {
+      "quoteId": 9,
+      "id": 3
+    },
+    {
+      "quoteId": 9,
+      "id": 4
+    },
+    {
+      "quoteId": 9,
+      "id": 5
+    },
+    {
+      "quoteId": 7,
+      "id": 6
+    },
+    {
+      "quoteId": 7,
+      "id": 7
+    },
+    {
+      "quoteId": 7,
+      "id": 8
+    },
+    {
+      "quoteId": 7,
+      "id": 9
+    },
+    {
+      "quoteId": 7,
+      "id": 10
+    },
+    {
+      "quoteId": 13,
+      "id": 11
+    },
+    {
+      "quoteId": 13,
+      "id": 12
+    },
+    {
+      "quoteId": 13,
+      "id": 13
     }
   ]
 }
